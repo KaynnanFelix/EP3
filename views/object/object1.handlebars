@@ -1,0 +1,29 @@
+<div class="container">
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page">Objetos de Arte</li>
+        </ol>
+    </nav>
+    <h1>Objetos de Arte</h1>
+    <div class="row">
+        <table class="table table-striped">
+            <caption>Objetos de arte comprados por tipo e por classe.</caption>
+            <thead class="table-dark">
+                <tr>
+                    <th>Titulo</th>
+                    <th>Tipo</th>
+                    <th>Categoria</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each object}}
+                <tr>
+                    <td>{{titulo}}</td>
+                    <td>{{tipoobjart}}</td>
+                    <td>{{catobjtart}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>

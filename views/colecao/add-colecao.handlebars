@@ -1,0 +1,33 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/host/hosts">Hosts</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Host</li>
+  </ol>
+</nav>
+<h1>Host Information</h1>
+<form action="/criar-colecao" method="POST">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="NomeCol" class="form-label">NomeCol</label>
+            <input type="text" class="form-control" name="NomeCol" id="NomeCol" placeholder="NomeCol">
+        </div>
+        <div class="col-md-4">
+            <label for="DescrCol" class="form-label">DescrCol</label>
+            <input type="text" class="form-control" name="DescrCol" id="DescrCol" placeholder="DescrCol">
+        </div>
+        <div class="col-md-4">
+            <label for="Endereco" class="form-label">Endereco</label>
+            <input type="text" class="form-control" name="Endereco" id="Endereco" placeholder="Endereco">
+        </div>
+        <div class="col-md-4">
+            <label for="Telefone" class="form-label">Telefone</label>
+            <input type="text" class="form-control" name="Telefone" id="Telefone" placeholder="Telefone">
+        </div>
+        <div class="col-md-4">
+            <label for="TipoCol" class="form-label">TipoCol</label>
+            <input type="text" class="form-control" name="TipoCol" id="TipoCol" placeholder="TipoCol">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Colecao</button>
+    <input type="reset" value="Reset" class="btn btn-secondary">
+</form>

@@ -1,0 +1,28 @@
+<form action="/criar-emprestado" method="POST">
+    <div class="col-md-6">
+        <label for="NomeColPert" class="form-label">NomeColPert</label>
+        <select name="NomeColPert" id="NomeColPert" class="form-select">
+            {{#each colecao}}
+            <option value="{{{nomecol}}}">{{{nomecol}}}</option>
+            {{/each}}
+        </select>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <label for="NumObj4" class="form-label">NumObj4</label>
+            <select name="NumObj4" id="NumObj4" class="form-select">
+                {{#each objeto}}
+                <option value="{{{numid}}}">{{{titulo}}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="col-md-4">
+            <label for="DataEmprestimo" class="form-label">DataEmprestimo</label>
+            <input type="date" class="form-control" name="DataEmprestimo" id="DataEmprestimo"
+                placeholder="DataEmprestimo">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Permanente</button>
+    <input type="reset" value="Reset" class="btn btn-secondary">
+</form>

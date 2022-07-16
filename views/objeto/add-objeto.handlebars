@@ -1,0 +1,25 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/host/hosts">Hosts</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Host</li>
+  </ol>
+</nav>
+<h1>Host Information</h1>
+<form action="/criar-objeto" method="POST">
+    <div class="row">
+        <div class="col-md-4">
+            <label for="Titulo" class="form-label">Titulo</label>
+            <input type="text" class="form-control" name="Titulo" id="Titulo" placeholder="Titulo">
+        </div>
+        <div class="col-md-4">
+            <label for="TipoObjArt" class="form-label">TipoObjArt</label>
+            <input type="text" class="form-control" name="TipoObjArt" id="TipoObjArt" placeholder="TipoObjArt">
+        </div>
+        <div class="col-md-4">
+            <label for="CatObjtArt" class="form-label">CatObjtArt</label>
+            <input type="text" class="form-control" name="CatObjtArt" id="CatObjtArt" placeholder="CatObjtArt">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Objeto</button>
+    <input type="reset" value="Reset" class="btn btn-secondary">
+</form>

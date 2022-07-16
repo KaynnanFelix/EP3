@@ -1,0 +1,29 @@
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/host/hosts">Hosts</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Add Host</li>
+  </ol>
+</nav>
+<h1>Host Information</h1>
+<form action="/criar-permanente" method="POST">
+    <div class="row">
+       <div class="col-md-6">
+            <label for="NumObj5" class="form-label">NumObj5</label>
+            <select name="NumObj5" id="NumObj5" class="form-select">
+                {{#each result}}
+                <option value="{{{numid}}}">{{{titulo}}}</option>
+                {{/each}}
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label for="Custo" class="form-label">Custo</label>
+            <input type="number" class="form-control" name="Custo" id="Custo" placeholder="Custo">
+        </div>
+        <div class="col-md-4">
+            <label for="DataAquisicao" class="form-label">DataAquisicao</label>
+            <input type="date" class="form-control" name="DataAquisicao" id="DataAquisicao" placeholder="DataAquisicao">
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Adicionar Permanente</button>
+    <input type="reset" value="Reset" class="btn btn-secondary">
+</form>
