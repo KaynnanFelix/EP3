@@ -14,7 +14,9 @@ module.exports = {
                 res.render('query/query', { hotels: result })
             })
     },
-
+    home(req, res) {
+        res.render('home')
+    },
     object1(req, res) {
         sequelize.query('select titulo, TipoObjArt, CatObjtArt from public."objetos_arte" order by  TipoObjArt, CatObjtArt', { type: sequelize.QueryTypes.SELECT })
             .then(result => {
@@ -120,7 +122,7 @@ module.exports = {
                     path: '/permanente/add-permanente',
                     result: result
                 })
-            })    
+            })
     }, postPermanente(req, res) {
         const NumObj5 = req.body.NumObj5
         const Custo = req.body.Custo
@@ -136,16 +138,16 @@ module.exports = {
         sequelize.query('select numid, titulo from public."objetos_arte"', { type: sequelize.QueryTypes.SELECT })
             .then(objeto => {
                 sequelize.query('SELECT * FROM public."colecao" ORDER BY nomecol ASC ', { type: sequelize.QueryTypes.SELECT })
-                .then(colecao => {
-                    //return res.send({objeto, colecao });
-                    res.render('emprestado/add-emprestado', {
-                        pageTitle: 'Add Emprestado',
-                        path: '/emprestado/add-emprestado',
-                        objeto: objeto,
-                        colecao: colecao,
+                    .then(colecao => {
+                        //return res.send({objeto, colecao });
+                        res.render('emprestado/add-emprestado', {
+                            pageTitle: 'Add Emprestado',
+                            path: '/emprestado/add-emprestado',
+                            objeto: objeto,
+                            colecao: colecao,
+                        })
                     })
-                })    
-            })    
+            })
     }, postEmprestado(req, res) {
         const NumObj4 = req.body.NumObj4
         const DataEmprestimo = req.body.DataEmprestimo

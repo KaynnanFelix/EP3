@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 const path = require('path')
 const { engine } = require('express-handlebars')
 
@@ -26,9 +26,9 @@ const museumRoutes = require('./routes/museum')
 
 app.use(bodyParser.urlencoded({ extended: false }))
 
-app.get('/', (req, res) => {
-    res.send('Hello, World!')
-})
+// app.get('/', (req, res) => {
+//     res.send('Hello, World!')
+// })
 
 app.use('/', museumRoutes)
 // app.use('/object1', museumRoutes)

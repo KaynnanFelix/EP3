@@ -3,7 +3,7 @@ const express = require('express')
 const museumController = require('../controllers/museum')
 const router = express.Router()
 // query 1
-// router.get('/query', museumController.query)
+ router.get('/', museumController.home)
 router.get('/object1', museumController.object1)
 router.get('/object2', museumController.object2)
 router.get('/object3', museumController.object3)
